@@ -71,28 +71,38 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
+        <div class="container">
             
             <div class="row">
+
                 
+            @if(Auth::check())
                 <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
                     
                     <ul class="list-group">
                     
                         <li class="list-group-item">
-                            <a href="/home"> Dashboard </a>
+                            <a href="{{ route('home') }}"> Dashboard </a>
                         </li>    
                         <li class="list-group-item">
-                            <a href="/post/create"> Create a new post </a>                                
+                            <a href="{{ route('post.create') }}"> Create a new post </a>                                
+                        </li>    
+                        <li class="list-group-item">
+                            <a href="{{ route('category.create') }}"> Create a new Category </a>                                
+                        </li>    
+                        <li class="list-group-item">
+                            <a href="{{ route('category.index') }}"> All Categories </a>                                
                         </li>    
 
                     </ul>
 
                 </div>
 
+            @endif
+
                 <div class="col-lg-9 col-sm-9 col-md-9 col-xs-9">
                     
-                @yield('content')
+                    @yield('content')
         
                 </div>
                 
