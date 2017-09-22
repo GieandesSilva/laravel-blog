@@ -64,11 +64,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function (){
 
 	]);
 
-	Route::get('/category/index', [
+	Route::get('/categories', [
 
 		'uses' => 'CategoriesController@index',
 
-		'as' => 'category.index'
+		'as' => 'categories'
 
 	]);
 

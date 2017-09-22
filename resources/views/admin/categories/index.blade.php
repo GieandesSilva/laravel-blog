@@ -3,26 +3,32 @@
 
 @section('content')
 
+	<div class="panel panel-default">		
+		<div class="panel-body">
+			
+			<table class="table table-hover">
 
+				<thead class="thead-inverse">	
+					<tr>
+						<th>Category Name</th>			
+						<th>Editing</th>			
+						<th>Deleting</th>							
+					</tr>
+				</thead>		
 
-	<table class="table table-hover">
+				<tbody>
+				@foreach($categories as $category)
+					<tr>
+						<td>{{ $category->name }}</td>
+						<td><a href="">Editing</a></td>
+						<td><a href="">Deleting</a></td>
+					</tr>			
+				@endforeach
+				</tbody>
 
-		<thead class="thead-inverse">	
-			<tr>
-				<th>Category Name</th>			
-				<th>Editing</th>			
-				<th>Deleting</th>							
-			</tr>
-		</thead>		
+			</table>
 
-		<tbody>
-			<tr>
-				<td></td>	
-				<td></td>	
-				<td></td>	
-			</tr>			
-		</tbody>
-
-	</table>
+		</div>
+	</div>
 
 @stop
