@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -24,7 +26,7 @@ class PostController extends Controller
     public function create()
     {
         
-        return view('admin.posts.create');
+        return view('admin.posts.create')->with('categories', Category::all());
 
     }
 
@@ -44,6 +46,8 @@ class PostController extends Controller
             'title' => 'required',
 
             'featured' => 'required|image',
+
+            'category_id' => 'required',
 
             'content' => 'required'
 

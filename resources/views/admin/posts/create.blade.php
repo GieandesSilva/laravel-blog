@@ -24,6 +24,18 @@
 					<label for="featured">Feature Image</label>
 					<input type="file" name="featured" class="form-control">	
 				</div>
+				<div class="form-group">
+					<label for="category">Select a Category: </label>
+					<select name="category_id" id="category" class="form-control">
+
+						@foreach($categories as $category)
+
+							<option value="{{ $category->id }}"> {{ $category->name }} </option>
+
+						@endforeach
+
+					</select>
+				</div>
 				<div class="form-group">			
 					<label for="content">Content</label>
 					<textarea name="content" class="form-control" rows="10"></textarea>
