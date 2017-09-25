@@ -89,6 +89,9 @@
                             <a href="{{ route('post.create') }}"> Create a new post </a>                                
                         </li>    
                         <li class="list-group-item">
+                            <a href="{{ route('posts') }}"> All Posts </a>                                
+                        </li>    
+                        <li class="list-group-item">
                             <a href="{{ route('category.create') }}"> Create a new Category </a>                                
                         </li>    
                         <li class="list-group-item">
@@ -125,6 +128,11 @@
 
         @endif
 
+        @if(Session::has('info'))
+
+            toastr.info("{{ Session::get('info') }}")
+
+        @endif
     </script>
 </body>
 </html>

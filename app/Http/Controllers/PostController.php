@@ -20,6 +20,7 @@ class PostController extends Controller
     public function index()
     {
         //
+        return view('admin.posts.index')->with('posts', Post::all());
     }
 
     /**
@@ -29,8 +30,18 @@ class PostController extends Controller
      */
     public function create()
     {
+
+        $categories = Category::all();
+
+        if ($categories->count() == 0) {
+
+            Session::flash('info', 'You must have some categories before attempting to create a post.');
+
+            return redirect()->back();
+            # code...
+        }
         
-        return view('admin.posts.create')->with('categories', Category::all());
+        return view('admin.posts.create')->with('categories', $categories);
 
     }
 
@@ -73,11 +84,13 @@ class PostController extends Controller
 
             'featured' => 'images/uploads/posts/'.$featured_new_name,
 
+            'slug' => str_slug($request->title)
+
         ]);
 
         Session::flash('success', 'Post created successfully.');
 
-        dd($request->all());
+        return redirect()->back();
     }
 
     /**
