@@ -71,13 +71,13 @@ class PostController extends Controller
 
             'category_id' => $request->category_id,
 
-            'featured' => 'images/uploads/posts'.$featured_new_name,
-            
+            'featured' => 'images/uploads/posts/'.$featured_new_name,
+
         ]);
 
         Session::flash('success', 'Post created successfully.');
 
-        return redirect()->back();
+        dd($request->all());
     }
 
     /**
