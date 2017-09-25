@@ -70,6 +70,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function (){
 		'as' => 'posts.trashed'
 	]);
 
+	Route::get('/post/kill/{id}', [
+
+		'uses' => 'PostController@kill',
+
+		'as' => 'post.kill'
+	]);
+
 	Route::get('/category/create', [
 	
 		'uses' => 'CategoriesController@create',
