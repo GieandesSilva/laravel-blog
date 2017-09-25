@@ -4,6 +4,9 @@
 @section('content')
 
 	<div class="panel panel-default">		
+		<div class="panel-heading">
+			All Published Posts
+		</div>	
 		<div class="panel-body">
 			
 			<table class="table table-hover">
@@ -19,6 +22,7 @@
 
 				<tbody>
 				@if($posts->count() > 0)
+
 					@foreach($posts as $post)
 						<tr>
 							<td> <img src=" {{ $post->featured }} " alt=" {{ $post->title }} " height="100px"></td>
@@ -27,10 +31,11 @@
 							<td><a href="{{ route('post.delete',['id'=>$post->id])}}" class="btn btn-danger btn-xs">Trash</a></td>
 						</tr>			
 					@endforeach
+
 				@else
 
 					<tr>
-						<td colspan="5" class="text-center"> No Posts Actives</td>
+						<td colspan="5" class="text-center"> No Published Posts</td>
 					</tr>
 
 				@endif

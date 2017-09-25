@@ -4,6 +4,9 @@
 @section('content')
 
 	<div class="panel panel-default">		
+		<div class="panel-heading">
+			All Trasheds Posts
+		</div>	
 		<div class="panel-body">
 			
 			<table class="table table-hover">
