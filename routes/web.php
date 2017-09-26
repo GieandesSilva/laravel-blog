@@ -225,7 +225,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function (){
 		'uses' => 'UsersController@admin',
 
 		'as' => 'user.admin',
+
 	]);
+
 
 	Route::get('/user/not_admin/{id}', [
 
