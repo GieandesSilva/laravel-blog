@@ -86,7 +86,7 @@
                             <a href="{{ route('home') }}"> Dashboard </a>
                         </li>    
                         <li class="list-group-item">
-                            <a href="{{ route('post.create') }}"> Create a new post </a>                                
+                            <a href="{{ route('post.create') }}"> Create a new Post </a>                                
                         </li>    
                         <li class="list-group-item">
                             <a href="{{ route('posts') }}"> All Posts </a>                                
@@ -104,7 +104,13 @@
                             <a href="{{ route('tags') }}"> All Tags </a>                                
                         </li>    
                         <li class="list-group-item">
-                            <a href="{{ route('tag.create') }}"> Create Tag </a>                                
+                            <a href="{{ route('tag.create') }}"> Create a new Tag </a>                                
+                        </li>    
+                        <li class="list-group-item">
+                            <a href="{{ route('users') }}"> All Users </a>                                
+                        </li>    
+                        <li class="list-group-item">
+                            <a href="{{ route('user.create') }}"> Create a new User </a>                                
                         </li>    
 
                     </ul>
