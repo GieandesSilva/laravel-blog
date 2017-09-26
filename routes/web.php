@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/test', function() {
+
+	return App\Profile::find(1)->user;
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,8 +35,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function (){
 		'as' =>	'home'
 
 	]);
-
-
 
 	Route::get('/post/create', [
 
