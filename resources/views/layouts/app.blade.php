@@ -48,7 +48,8 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <img src="{{ asset(Auth::user()->profile->avatar) }}" style=" height: 40px; margin-top: 5px; border-radius:50%; float: left; text-align: inline-block">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="float: left; text-align: inline-block">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
