@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/toastr.min.css') }}">
+    @yield('styles')
 </head>
 <body>
     <div id="app">
@@ -154,5 +155,7 @@
 
         @endif
     </script>
+
+    @yield('scripts')
 </body>
 </html>

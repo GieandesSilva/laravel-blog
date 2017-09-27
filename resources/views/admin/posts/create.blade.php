@@ -47,7 +47,7 @@
 				</div>
 				<div class="form-group">			
 					<label for="content">Content</label>
-					<textarea name="content" class="form-control" rows="10"></textarea>
+					<textarea name="content" id="content" class="form-control"></textarea>
 				</div>
 				<div class="form-group text-right">
 					<button class="btn btn-success" type="submit"> Store Post </button>
@@ -57,5 +57,24 @@
 		</div>
 	</div>
 
+@stop
+
+@section('styles')
+
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
 
 @stop
+
+@section('scripts')
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+	<script>
+		$(document).ready(function() {
+		    $('#content').summernote({
+
+		    	height: 300
+		    });
+		});
+	</script>
+@stop
+
