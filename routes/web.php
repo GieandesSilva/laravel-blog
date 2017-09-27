@@ -228,12 +228,32 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function (){
 
 	]);
 
-
 	Route::get('/user/not_admin/{id}', [
 
 		'uses' => 'UsersController@not_admin',
 
 		'as' => 'user.not_admin'
+	]);
+
+	Route::get('/user/profile', [
+
+		'uses' => "ProfileController@index",
+
+		'as' => 'user.profile'
+	]);
+
+	Route::post('/user/profile/update', [
+
+		'uses' => "ProfileController@update",
+
+		'as' => 'user.profile.update'
+	]);
+
+	Route::get('/user/delete/{id}', [
+
+		'uses' => 'UsersController@destroy',
+
+		'as' => 'user.delete'
 	]);
 });
 

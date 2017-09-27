@@ -124,8 +124,20 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+
     {
         //
+
+        $user = User::find($id);
+
+
+        $user->delete();
+
+        $user->profile->delete();
+
+        Session::flash('success', 'User deleted sucessfully.');
+        
+        return redirect()->back();
     }
 
     public function admin($id) 
