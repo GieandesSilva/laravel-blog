@@ -255,5 +255,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function (){
 
 		'as' => 'user.delete'
 	]);
+
+	Route::get('/settings', [
+
+		'uses' => 'SettingsController@index',
+
+		'as' => 'settings'
+	])->middleware('admin');
+
+	Route::post('/settings/update', [
+
+		'uses' => 'SettingsController@update',
+
+		'as' => 'settings.update'
+	])->middleware('admin');
 });
 
