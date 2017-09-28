@@ -83,7 +83,7 @@
 
 @section('styles')
 
-	<link href="{{ asset('summernote.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/summernote.css') }}" rel="stylesheet">
 
 @stop
 
