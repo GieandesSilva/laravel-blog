@@ -215,7 +215,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">{{ $html5->name }}</h4>
+                                <h4 class="h1 heading-title">{{ $html->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -225,7 +225,7 @@
                     </div>
                     <div class="row">
                         <div class="case-item-wrap">
-                            @foreach($html5->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                            @foreach($html->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="case-item">
                                         <div class="case-item__thumb">
