@@ -36,11 +36,18 @@ class FrontEndController extends Controller
 
     	$post = Post::where('slug', $slug)->first();
 
+        $previous_post = Post::where('id', '<', $post->id)->max('id');
+
+        $next_post = Post::where('id', '>', $post->id)->min('id');
+
+
     	return view('single')
     		->with('post', $post)
     		->with('title', $post->title)
     		->with('categories', Category::take(9)->get())
-	    	->with('settings', Setting::first());
+	    	->with('settings', Setting::first())
+            ->with('previous', Post::find($previous_post))
+            ->with('next', Post::find($next_post));
     }
 
 }
