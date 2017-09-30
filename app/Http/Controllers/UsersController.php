@@ -74,7 +74,7 @@ class UsersController extends Controller
 
             'user_id' => $user->id,
 
-            'avatar' => '/images/uploads/avatars/default.jpg',
+            'avatar' => 'images/uploads/avatars/default.jpg',
         ]);
 
         Session::flash('success', 'User created successfully.');

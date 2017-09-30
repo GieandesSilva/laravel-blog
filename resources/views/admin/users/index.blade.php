@@ -26,7 +26,7 @@
 					@foreach($users as $user)
 						<tr>
 							<td> <img src="{{ asset($user->profile->avatar) }}" height="60px" style="border-radius:50%"></td>
-							<td>{{ $user->name}}</td>
+							<td>{{ $user->name }}</td>
 							<td> 
 
 								@if($user->admin)
