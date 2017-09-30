@@ -7,7 +7,7 @@
 
 <div class="stunning-header stunning-header-bg-lightviolet">
     <div class="stunning-header-content">
-        <h1 class="stunning-header-title">{{ $tag->name }}</h1>
+        <h1 class="stunning-header-title">{{ $tag->tag }}</h1>
     </div>
 </div>
 
