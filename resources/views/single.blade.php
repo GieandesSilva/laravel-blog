@@ -46,7 +46,7 @@
 
                             <span class="category">
                                 <i class="seoicon-tags"></i>
-                                <a href="#">{{ $post->category->name }}</a>
+                                <a href="{{ route('category.single', ['id' => $post->category->id]) }}">{{ $post->category->name }}</a>
                             </span>
 
                         </div>
@@ -133,7 +133,6 @@
                         <a href="{{ route('post.single', ['slug' => $next->slug])}}" class="btn-next-wrap">
                             <div class="btn-content">
                                 <div class="btn-content-title">Next Post</div>
-                                <p class="btn-content-subtitle">Duis Autem Velius</p>
                             </div>
                             <svg class="btn-next">
                                 <use xlink:href="#arrow-right"></use>
@@ -149,7 +148,6 @@
 
                             <div class="btn-content">
                                 <div class="btn-content-title">Previous Post</div>
-                                <p class="btn-content-subtitle">Claritas Est Etiam Processus</p>
                             </div>
                         </a>
                     @endif
@@ -181,7 +179,6 @@
             <!-- End Post Details -->
 
             <!-- Sidebar-->
-
             <div class="col-lg-12">
                 <aside aria-label="sidebar" class="sidebar sidebar-right">
                     <div  class="widget w-tags">
@@ -194,15 +191,13 @@
                         </div>
 
                         <div class="tags-wrap">
-                            <a href="#" class="w-tags-item">SEO</a>
-                            <a href="#" class="w-tags-item">Advertising</a>
-                            <a href="#" class="w-tags-item">Business</a>
-                            <a href="#" class="w-tags-item">Optimization</a>
-                            <a href="#" class="w-tags-item">Digital Marketing</a>
-                            <a href="#" class="w-tags-item">Social</a>
-                            <a href="#" class="w-tags-item">Keyword</a>
-                            <a href="#" class="w-tags-item">Strategy</a>
-                            <a href="#" class="w-tags-item">Audience</a>
+
+                            @foreach($tags as $tag)
+
+                                <a href="#" class="w-tags-item">{{ $tag->tag }}</a>
+                            
+                            @endforeach
+
                         </div>
                     </div>
                 </aside>
