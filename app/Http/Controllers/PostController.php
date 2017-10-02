@@ -8,6 +8,8 @@ use App\Post;
 
 use App\Tag;
 
+use Auth;
+
 use App\Category;
 
 use Illuminate\Http\Request;
@@ -89,7 +91,9 @@ class PostController extends Controller
 
             'featured' => 'images/uploads/posts/'.$featured_new_name,
 
-            'slug' => str_slug($request->title)
+            'slug' => str_slug($request->title),
+
+            'user_id' => Auth::id();
 
         ]);
 
