@@ -29,7 +29,7 @@
                                 Posted by
 
                                 <div class="post__author-name fn">
-                                    <a href="#" class="post__author-link">Admin</a>
+                                    {{ $post->user->name }}
                                 </div>
 
                             </div>
