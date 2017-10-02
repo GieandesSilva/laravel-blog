@@ -93,7 +93,7 @@ class PostController extends Controller
 
             'slug' => str_slug($request->title),
 
-            'user_id' => Auth::id();
+            'user_id' => Auth::id()
 
         ]);
 
