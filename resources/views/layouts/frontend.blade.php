@@ -222,6 +222,7 @@
 <script src="{{ asset('app/js/animation.velocity.min.js') }}"></script>
 
 <!-- ...end JS Script -->
-
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59d29e7469c37aa9"></script> 
 </body>
 </html>
